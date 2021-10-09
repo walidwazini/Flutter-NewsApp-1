@@ -13,13 +13,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        iconTheme: IconThemeData(
+          color: Colors.red,
+        ),
         textTheme: TextTheme(
           headline6: TextStyle( color: Colors.yellow),
         ),
         appBarTheme: AppBarTheme(
+          color:Color(0xff004d37),
+          //color: Color(0xff222240),
           textTheme: TextTheme()
         ),
-        primarySwatch: Colors.deepPurple,
+        primarySwatch: Colors.red,
       ),
       home: HomeScreen(),
     );

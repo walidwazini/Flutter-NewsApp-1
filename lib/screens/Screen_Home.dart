@@ -19,15 +19,15 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       // Drawer starts
       drawer:Drawer(
-        child: Container( color: Colors.purpleAccent,
+        child: Container( color: Color(0xff004d37),
           child: ListView( children: [
             UserAccountsDrawerHeader(
-              decoration: BoxDecoration(color: Colors.blue),
+              decoration: BoxDecoration(color: Color(0xff004d37)),
                 accountName: null,
                 accountEmail: null,
             ),
             ListTile(
-              leading: Icon(Icons.public),
+              leading: Icon(Icons.public, color: Colors.white,),
               title: Text('International',style: TextStyle(color: Colors.white),),
             )
           ],),
