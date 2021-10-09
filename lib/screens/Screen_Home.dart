@@ -27,9 +27,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 accountEmail: null,
             ),
             ListTile(
+              onTap: (){
+                Navigator.of(context).pop();
+              },
               leading: Icon(Icons.public, color: Colors.white,),
               title: Text('International',style: TextStyle(color: Colors.white),),
-            )
+            ),
+            _newsCategory(context, Icons.image, 'Local News'),
+            _newsCategory(context, Icons.people, 'Politics News'),
+            _newsCategory(context, Icons.sports_baseball, 'Sports News'),
           ],),
         ),
       ) ,
@@ -37,4 +43,15 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Container(),
     );
   }
+
+  Widget _newsCategory(ctx, IconData iconCat, String titleCat ){
+    return ListTile(
+      onTap: () {Navigator.of(ctx).pop();},
+      leading: Icon(
+        iconCat, color: Colors.white,
+      ),
+      title: Text(titleCat, style: TextStyle(color: Colors.white),),
+    );
+  }
+
 }
